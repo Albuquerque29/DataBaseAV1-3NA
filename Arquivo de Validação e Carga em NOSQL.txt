@@ -1,0 +1,16 @@
+import pymongo
+
+# Conectando ao banco de dados MongoDB
+client = pymongo.MongoClient("mongodb+srv://thiago:123@clustercopaanalytics.jxxoahi.mongodb.net/")
+db = client["CopaAnalytics"]
+
+# Validar e inserir dados
+data_to_insert = {"Nome_Sel": "Brasil", "Gols_ft": "", "Gols_sof":"11","Grupos": "A", "Continente":"América do Sul"}
+1
+if data_to_insert:  # Validar os dados conforme necessário
+    # Inserir dados na coleção
+    db.jogadores.insert_one(data_to_insert)
+    print("Dados inseridos com sucesso!")
+
+# Fechar conexão com o banco de dados MongoDB
+client.close()
