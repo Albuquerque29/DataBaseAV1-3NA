@@ -818,7 +818,7 @@ INSERT INTO jogadores (Numero, Posicao, Nome_Jog, Nome_Sel, Gols_Jog) VALUES
     (18, 'MF', 'Landry NGuémo', 'Camarões', 0),
     (19, 'FW', 'Fabrice Olinga', 'Camarões', 0),
     (20, 'MF', 'Edgar Salli', 'Camarões', 0),
-    (21, 'DF', 'Samuel Etoo', 'Camarões', 0),
+    (21, 'DF', 'Samuel Etoo', 'Camarões', 0);
 
 INSERT INTO jogadores (Numero, Posicao, Nome_Jog, Nome_Sel, Gols_Jog) VALUES 
     (1, 'GK', 'Vincent Enyeama', 'Nigéria', 0),
