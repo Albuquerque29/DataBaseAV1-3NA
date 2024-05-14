@@ -7,6 +7,8 @@ db = client["CopaAnalytics"]
 # Inserção dos dados nas Campos;
 data_to_insert = [ 
     {"Tempo_Gol": "11 29 71 90+1 17 69 7 23 3 90+2", "Tipo_Gol": "Pen"},
+    {"Tempo_Gol": "8 19 87", "Tipo_Gol": "Pen, gc"},
+    {"Tempo_Gol": "80 90+4", "Tipo_Gol": "gc"},
 ]
 
 # Validar os dados conforme necessário
