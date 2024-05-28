@@ -1,0 +1,47 @@
+--Criação da DATABASE--
+create database olap_db
+
+-- Criação das tabelas de dimensões --
+CREATE TABLE dim_product (
+    product_id INT PRIMARY KEY,
+    product_name VARCHAR(255),
+    category VARCHAR(255)
+);
+
+CREATE TABLE dim_time (
+    time_id INT PRIMARY KEY,
+    date DATE,
+    year INT,
+    month INT,
+    day INT,
+    quarter INT
+);
+
+CREATE TABLE dim_location (
+    location_id INT PRIMARY KEY,
+    city VARCHAR(255),
+    state VARCHAR(255),
+    country VARCHAR(255)
+);
+
+CREATE TABLE dim_customer (
+    customer_id INT PRIMARY KEY,
+    customer_name VARCHAR(255),
+    segment VARCHAR(255)
+);
+
+-- Criação da tabela fato
+CREATE TABLE fact_sales (
+    sales_id INT PRIMARY KEY,
+    product_id INT,
+    time_id INT,
+    location_id INT,
+    customer_id INT,
+    total_sales DECIMAL(10, 2),
+    quantity_sold INT,
+    profit DECIMAL(10, 2),
+    FOREIGN KEY (product_id) REFERENCES dim_product(product_id),
+    FOREIGN KEY (time_id) REFERENCES dim_time(time_id),
+    FOREIGN KEY (location_id) REFERENCES dim_location(location_id),
+    FOREIGN KEY (customer_id) REFERENCES dim_customer(customer_id)
+);
